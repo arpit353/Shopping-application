@@ -1,0 +1,23 @@
+Steps to run Java JDBC web application
+
+1. com.mysql.jdbc_5.1.5.jar in the libraries
+2. Make a servlet in the default package i.e demoservlet.java
+3. Set url. example :- String url = "jdbc:mysql://localhost/demo";
+4. Make instance :- Class.forName("com.mysql.jdbc.Driver").newInstance();
+5. Make statement :- conn = DriverManager.getConnection(url, userName, password);
+                                                     Statement s = conn.createStatement();
+6. Execute Query :- s.executeQuery("SELECT * FROM demo");
+7. Print the output :- while (rs.next()) {
+                                              out.println(rs.getString("name"));
+                                        }
+8. Go to project properties , then to libraries
+9. Add Jar
+10. Select mysqlconnector
+11. Click Ok
+12. Finally run the project
+
+
+For getting the parameter 
+
+i) use:-  request.getParameter("email")
+ii) url:- http://localhost:8080/Second/demoservlet?email=arpit&pass=shobhan 

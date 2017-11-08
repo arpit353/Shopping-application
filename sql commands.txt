@@ -1,0 +1,87 @@
+create table customer(
+username varchar(60) NOT NULL,
+password varchar(60),
+firstname varchar(60),
+lastname varchar(60),
+address varchar(60),
+city varchar(60),
+zipcode varchar(60),
+mobile varchar(60),
+email varchar(60),
+PRIMARY KEY(username)
+);
+
+create table user(
+username varchar(60),
+password varchar(60),
+primary key(username)
+);
+
+
+create table card_details(
+amount int(60),
+card_number int(60),
+card_username varchar(60),
+card_type varchar(60),
+card_password varchar(60),
+expiry_date date,
+CONSTRAINT pk_card primary key(card_username,card_number)
+);
+
+create table electronic_item(
+id int(60),
+No_of_items int(60),
+Item_no int(60),
+Item_name varchar(60),
+Company varchar(60),
+Price int(60),
+Type varchar(60),
+primary key(id)
+);
+
+
+create table shopping_basket(
+username varchar(60),
+item_no  int(60),
+price  int(60),
+n int(60)
+);
+
+
+insert into customer values('sa114','1212','sayantan','kundu','vit vellore','vellore','1604','9003665334','skundu@gmail.com');
+insert into customer values('ashish1','1333','ashish','kumar','vit vellore','vellore','1604','9003665339','as123@gmail.com');
+insert into customer values('ravi2','1444','ravi','kumar','vit vellore','vellore','1604','9003665337','rav123@gmail.com');
+insert into customer values('na3','1555','nasir','hussain','vit vellore','vellore','1604','9003665934','na3@gmail.com');
+
+
+
+insert into user values('sa114','1212');
+insert into user values('ashish1','1333');
+insert into user values('ravi2','1444');
+insert into user values('na3','1555');
+
+
+insert into card_details values(9000000,121,'sa114','DEBIT','121','2018-10-04');
+insert into card_details values(90000,1333,'ashish1','DEBIT','1333','2019-10-04');
+insert into card_details values(80000,1444,'ravi2','DEBIT','1444','2018-10-10');
+insert into card_details values(900,1555,'na3','DEBIT','1555','2020-1-04');
+insert into card_details values(9000,1666,'NARAYAN','DEBIT','1666','2018-10-04');
+insert into card_details values(8000,1777,'MURTI','DEBIT','1777','2019-10-04');
+insert into card_details values(70000,1888,'SANCHITA','DEBIT','1888','2018-10-10');
+insert into card_details values(100000,1999,'ANISHA','DEBIT','1999','2020-1-04');
+
+
+insert into electronic_item values( 1,101,1,'MOBILE','HP',45000,'android');
+insert into electronic_item values(2,102,2,'TAB','APPLE',45000,'touch screen');
+insert into electronic_item values(3,103,3,'PRINTER','SAMSUNG',45000,'laser');
+insert into electronic_item values(4,104,4,'HARD DISK','HP',20000,'1TB');
+insert into electronic_item values(5,105,5,'PENDRIVE','HP',45000,'8GB');
+insert into electronic_item values(6,106,6,'MEMORY CARD','APPLE',900,'8GB');
+insert into electronic_item values(7,100,7,'PRINTER','SAMSUNG',45000,'LASER');
+insert into electronic_item values(8,100,8,'LAPTOP','HP',50000,'I5');
+insert into electronic_item values(9,107,9,'MOUSE','HP',500,'OPTICAL');
+insert into electronic_item values(10,108,10,'KEYBORD','APPLE',4500,'BLACK');
+insert into electronic_item values(11,110,11,'SPEAKER','SAMSUNG',4500,'STEREO');
+insert into electronic_item values(12,500,12,'POWER BANK','HP',2000,'1TB');
+insert into electronic_item values(13,1000,13,'HEADPHONE','HP',4500,'BLUETOOTHH');
+
